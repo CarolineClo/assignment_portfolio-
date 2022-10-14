@@ -108,10 +108,29 @@ header {
   margin: auto;
 }
 
+#fonts_ui header {
+  padding-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+
 #squiggle1 {
   width: 68vw;
   height: 26vh;
   justify-self: center;
+}
+
+#fonts_ui #squiggle2 {
+  transform: rotate(60deg);
+  width: 66%;
+  height: 44vh;
+  position: absolute;
+  top: 1%;
+  /* position: absolute;
+  height: 34vw;
+  width: 50%;
+  left: 0%;
+  top: 10%; */
 }
 
 .speckle {
@@ -264,6 +283,26 @@ footer #logo {
   padding: 0;
 }
 
+@media screen and (min-width: 1950px) {
+  .speckle {
+    background-position: right;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #squiggle1 {
+    height: 15vh;
+    width: 90%;
+  }
+
+  #fonts_ui #squiggle2 {
+    width: 75%;
+
+    height: 31vh;
+    top: 12%;
+  }
+}
+
 @media screen and (max-width: 700px) {
   header {
     padding: 0.8rem;
@@ -300,17 +339,10 @@ footer #logo {
     width: 82vw;
     height: 13vh;
   }
-}
 
-@media screen and (max-width: 1200px) {
-  #squiggle1 {
-    height: 15vh;
-    width: 90%;
-  }
-}
-
-@media screen and (min-width: 1950px) {
-  .speckle {
-    background-position: right;
+  #fonts_ui #squiggle2 {
+    width: 77%;
+    height: 14vh;
+    top: 25%;
   }
 }
