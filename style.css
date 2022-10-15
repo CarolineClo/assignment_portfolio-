@@ -35,13 +35,15 @@ strong {
   font-style: italic;
   font-weight: 600;
   color: var(--darkest-colour);
-  letter-spacing: 0.26rem;
+  letter-spacing: 0.12rem;
 }
 
 body {
   background-color: var(--lightest-colour);
   overflow-x: hidden;
 }
+
+/* ////// NAV //////// */
 
 #logo {
   height: 40px;
@@ -95,6 +97,7 @@ nav::after {
   width: 80%;
 }
 
+/*//////  HEADER   ////////*/
 header {
   background-color: var(--lightest-colour);
   position: relative;
@@ -108,9 +111,8 @@ header {
 }
 
 #fonts_ui header {
-  padding-bottom: 10rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 45% 1fr;
 }
 
 #squiggle1 {
@@ -140,6 +142,10 @@ header h1 {
   font-weight: 400;
 }
 
+#fonts_ui h1 {
+  grid-column: span 2;
+}
+
 .ley {
   color: var(--dark-colour);
   font-family: var(--sans-font);
@@ -158,14 +164,23 @@ header h2 {
   font-weight: 600;
 }
 
-#fonts_ui h2 {
-  font-size: 3.05rem;
+#fonts_ui header h2 {
+  padding-top: 9rem;
+  text-align: center;
+  position: unset;
+  align-self: auto;
 }
 
 #squiggle2 {
   align-self: center;
   height: 24vh;
   width: 100%;
+}
+
+#fonts_ui #squiggle3 {
+  width: 66%;
+  position: relative;
+  left: 34%;
 }
 
 main {
@@ -278,14 +293,6 @@ footer #logo {
   padding: 0;
 }
 
-#fonts_ui .squiggle_box {
-  padding: 0;
-}
-
-#fonts_ui #squiggle3 {
-  width: 60vw;
-}
-
 @media screen and (min-width: 1950px) {
   .speckle {
     background-position: right;
@@ -297,14 +304,6 @@ footer #logo {
     height: 15vh;
     width: 90%;
   }
-
-  #fonts_ui .squiggle_box {
-    padding: 0;
-  }
-
-  #fonts_ui #squiggle2 {
-    width: 30vw;
-  }
 }
 
 @media screen and (max-width: 700px) {
@@ -314,8 +313,17 @@ footer #logo {
   nav #logo {
     padding-left: 0.8rem;
   }
+
+  #burger {
+    right: 0.8rem;
+  }
   header {
     padding: 0.8rem;
+  }
+
+  #fonts_ui header {
+    display: flex;
+    flex-direction: column;
   }
   main {
     padding: 0 0.8rem 3rem 0.8rem;
@@ -334,11 +342,19 @@ footer #logo {
     line-height: 3.05rem;
   }
 
+  #fonts_ui header h1 {
+    padding: 2rem 0 1rem 0;
+  }
+
   header h2 {
     padding: 0;
     position: initial;
     font-size: 1.95rem;
     line-height: 2.44rem;
+  }
+
+  #fonts_ui header h2 {
+    padding: 1rem 0;
   }
 
   #squiggle1 {
@@ -350,10 +366,10 @@ footer #logo {
     width: 82vw;
     height: 13vh;
   }
-  /* 
-  #fonts_ui #squiggle2 {
-    width: 77%;
-    height: 14vh;
-    top: 25%;
-  } */
+
+  #fonts_ui #squiggle3 {
+    width: 46%;
+    left: 9%;
+    transform: rotate(8deg);
+  }
 }
