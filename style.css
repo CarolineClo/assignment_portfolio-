@@ -88,6 +88,7 @@ nav {
   height: 100px;
   max-width: 1440px;
   margin: auto;
+  z-index: 200;
 }
 
 nav::after {
@@ -115,6 +116,7 @@ header {
 #fonts_ui header {
   display: grid;
   grid-template-columns: 45% 1fr;
+  z-index: 100;
 }
 
 #squiggle1 {
