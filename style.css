@@ -252,6 +252,7 @@ main h3 {
   justify-content: space-between;
   box-shadow: 5px 4px 9px 2px rgb(22, 22, 22, 8%);
   max-width: 276px;
+  gap: 1.2rem;
 }
 
 .card:hover {
@@ -264,7 +265,7 @@ main h3 {
 .card h4 {
   font-size: 1.53rem;
   font-weight: 500;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.8rem;
 }
 
 button {
